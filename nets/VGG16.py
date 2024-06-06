@@ -69,7 +69,7 @@ def decom_vgg16(pretrained = False):
         state_dict = load_state_dict_from_url("https://download.pytorch.org/models/vgg16-397923af.pth", model_dir="./model_data")
         model.load_state_dict(state_dict)
     #----------------------------------------------------------------------------#
-    #   获取特征提取部分，最终获得一个37,37,1024的特征层
+    #   获取特征提取部分，最终获得一个37,37,512的特征层
     #----------------------------------------------------------------------------#
     features = list(model.features)[:30]
     #----------------------------------------------------------------------------#
