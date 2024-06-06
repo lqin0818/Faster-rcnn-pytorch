@@ -149,7 +149,6 @@ if __name__ == "__main__":
             class_list, str_nums
         ]
         colWidths = [0]*len(tableData)
-        len1 = 0
         for i in range(len(tableData)):
             for j in range(len(tableData[i])):
                 if len(tableData[i][j]) > colWidths[i]:
