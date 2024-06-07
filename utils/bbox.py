@@ -3,6 +3,8 @@ import torch
 from torch.nn import functional as F
 from torchvision.ops import nms
 
+#降RPN生成的预测转换成基于anchors的框
+#RPN预测的坐标输出为dx, dy, dw, dh
 def loc2bbox(src_bbox, loc):
     if src_bbox.size()[0] == 0:
         return torch.zeros((0, 4), dtype=loc.dtype)
