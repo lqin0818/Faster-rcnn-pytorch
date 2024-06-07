@@ -151,13 +151,6 @@ class RegionProposalNetwork(nn.Module):
         anchor = torch.from_numpy(anchor).unsqueeze(0).float().to(x.device)
         return rpn_locs, rpn_scores, rois, roi_indices, anchor
 
-
-
-
-
-
-
-
 def normal_init(m, mean, stddev, truncated=False):
     if truncated:
         m.weight.data.normal_().fmod_(2).mul_(stddev).add_(mean)  # not a perfect approximation
